@@ -1,0 +1,443 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.center {
+	text-align: center;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-verical-algin {
+	align-items: center;
+}
+
+.flex-horizontal-align {
+	justify-content: center;
+}
+
+.title {
+	font-size: 34px;
+	font-family: 'Srisakdi', cursive;
+}
+
+.square {
+	width: 16px;
+	height: 19px;
+	background-color: #000;
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+#main-header {
+	background: #fff;
+	width: 100%;
+	position: relative;
+	height: 62px;
+}
+
+#main-header::after {
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+#main-header #nav-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 62px;
+	background-color: #fff;
+	z-index: 999;
+}
+
+#main-header #nav-header #nav {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+#main-header #nav-header .nykaa-logo {
+	display: inline-block;
+	width: 80px;
+}
+
+@media screen and (min-width: 601px) {
+	#main-header #nav-header .nykaa-logo {
+		width: 100px;
+	}
+}
+
+#main-header #nav-header .nykaa-logo img {
+	height: 100%;
+}
+
+#main-header #nav-header .menu-icon {
+	line-height: 62px;
+	margin: 0 3px;
+}
+
+@media screen and (min-width: 1024px) {
+	#main-header #nav-header .menu-icon {
+		display: none;
+	}
+}
+
+#main-header #nav-header ul {
+	list-style-type: none;
+}
+
+#main-header #nav-header ul li {
+	float: left;
+	margin: 0 10px;
+	text-transform: uppercase;
+	height: 62px;
+	line-height: 62px;
+}
+
+#main-header #nav-header ul li a {
+	display: block;
+}
+
+#main-header #nav-header .left-container {
+	flex: 1;
+}
+
+@media screen and (max-width: 1024px) {
+	#main-header #nav-header .left-container ul {
+		display: none;
+	}
+}
+
+#main-header #nav-header .left-container .offer {
+	color: #fc2779;
+}
+
+#main-header #nav-header .right-container {
+	width: 65px;
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	#main-header #nav-header .right-container {
+		width: 215px;
+	}
+}
+
+@media screen and (min-width: 355px) {
+	#main-header #nav-header .right-container {
+		display: block;
+	}
+}
+
+#main-header #nav-header .right-container ul {
+	float: right;
+}
+
+@media screen and (max-width: 767px) {
+	#main-header #nav-header .right-container ul li {
+		margin: 0 3px;
+	}
+}
+
+#main-header #nav-header .right-container ul li.account-icon-container {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	#main-header #nav-header .right-container ul li.account-icon-container {
+		display: block;
+	}
+}
+
+#main-header #nav-header .right-container ul li.account-icon-container a {
+	margin-top: 8px;
+	text-align: center;
+}
+
+#main-header #nav-header .right-container ul li.account-icon-container div {
+	height: initial;
+	line-height: 24px;
+}
+
+#main-header #nav-header .right-container ul li .more-icon {
+	line-height: 62px;
+}
+
+@media screen and (min-width: 1024px) {
+	#main-header #nav-header .right-container ul li .more-icon {
+		display: none;
+	}
+}
+
+#main-header #nav-header .right-container .account-icon {
+	background: url("images/menusprite.png") 3px -42px no-repeat;
+	display: inline-block;
+	width: 22px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+#main-header #nav-header .right-container .cart-icon {
+	background: url("images/menusprite.png") -39px -31px no-repeat;
+	display: inline-block;
+	width: 22px;
+	height: 26px;
+	line-height: 26px;
+	vertical-align: sub;
+}
+
+#sub-header {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	#sub-header {
+		display: block;
+	}
+}
+
+#sub-header ul {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+#sub-header ul li {
+	display: inline-block;
+}
+
+#sub-header ul li a {
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	margin: 0 8px;
+}
+
+#sub-header ul li a.active {
+	color: blue;
+}
+
+#search-component {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 285px) {
+	#search-component {
+		display: none;
+	}
+}
+
+#search-component input {
+	padding: 0 8px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	width: 140px;
+	height: 38px;
+}
+
+@media screen and (min-width: 601px) {
+	#search-component input {
+		width: 170px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#search-component input {
+		width: 235px;
+		padding: 0 6px;
+		border-radius: 0;
+	}
+}
+
+#search-component input::placeholder {
+	font-size: 10px;
+}
+
+@media screen and (min-width: 601px) {
+	#search-component input::placeholder {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#search-component input::placeholder {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#search-component input::placeholder {
+		font-size: 16px;
+	}
+}
+
+#search-component .material-icons {
+	position: absolute;
+	right: 5px;
+}
+.section-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.banner-container {
+    display: none;
+}
+.banner-container.slick-initialized .slick-slide {
+    outline: none;
+}
+.shop-by-category-container .category-image-container .category-image {
+	position: relative;
+	margin: 0 8px 15px;
+	width: 100%;
+}
+
+.shop-by-category-container .category-image-container .category-image img {
+	width: 100%;
+}
+
+.shop-by-category-container .category-image-container .category-image:last-child .square {
+	display: none;
+}
+
+@media screen and (min-width: 601px) {
+	.shop-by-category-container .category-image-container .category-image {
+		width: calc(50% - 16px);
+	}
+
+	.shop-by-category-container .category-image-container .category-image .square {
+		left: 100%;
+		transform: initial;
+	}
+
+	.shop-by-category-container .category-image-container .category-image:nth-child(even) .square {
+		display: none;
+	}
+
+	.shop-by-category-container .category-image-container .category-image:last-child {
+		width: calc(100% - 16px);
+	}
+
+	.shop-by-category-container .category-image-container .category-image:last-child .square {
+		display: none;
+	}
+}
+
+.editor-picks-container {
+    display: none;
+}
+.editor-picks-carousel.slick-initialized .slick-slide {
+    outline: none;
+}
+.editor-picks-carousel.slick-initialized .slick-slide img {
+    margin:  0 auto;
+}
+.shop-by-offer-container .offer-image-container .offer-image {
+	position: relative;
+	margin: 0 8px 15px;
+	width: 100%;
+}
+
+.shop-by-offer-container .offer-image-container .offer-image img {
+	width: 100%;
+}
+
+.shop-by-offer-container .offer-image-container .offer-image:last-child .square {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.shop-by-offer-container .offer-image-container .offer-image {
+		width: calc(50% - 16px);
+	}
+
+	.shop-by-offer-container .offer-image-container .offer-image .square {
+		left: 100%;
+		top: 50%;
+		transform: translate(0%, -50%);
+	}
+
+	.shop-by-offer-container .offer-image-container .offer-image:last-child .square {
+		display: none;
+	}
+}
+
+.tile-image-container {
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+.tile-image-container .tile-image {
+	position: relative;
+	margin: 0 8px 15px 5px;
+	width: calc(70% - 16px);
+	display: inline-block;
+}
+
+.tile-image-container .tile-image:last-child .square {
+	display: none;
+}
+
+.tile-image-container .tile-image .square {
+	left: 100%;
+	top: 50%;
+	transform: translate(0%, -50%);
+}
+
+@media screen and (min-width: 1024px) {
+	.tile-image-container .tile-image {
+		width: calc(50% - 16px);
+		display: inline-block;
+	}
+}
+
+.brand-image-container .brand-image {
+	width: calc(50% - 16px);
+	margin: 0 8px 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.brand-image-container .brand-image {
+		width: calc(100%/3 - 16px);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.brand-image-container .brand-image {
+		width: calc(25% - 16px);
+	}
+}
+.brand-image-container .brand-image img {
+    width: 100%;
+}
